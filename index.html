@@ -56,6 +56,7 @@ input[type=text] {
                 <ul id="results"></ul>    
                    
                         <button id="logout" onclick="logout()">Logout</button>
+                        <button id="changepass" onclick="password()">Change Password</button>
                           
                 
                 </div>
@@ -64,11 +65,21 @@ input[type=text] {
 <div id="login_div" class="main-div">
     <h3>Assumption Gardens Web Login</h3>
     <br>
-    <input type="email" placeholder="Email..." id="email_field" />
+    <input placeholder="Username..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
 
-    <button onclick="login()">Login to Account</button>
+    <button id="login" onclick="login()">Login to Account</button>
   </div>
+
+<div id="pass_div" class="pass-div">
+    <h3>Assumption Gardens Web Login</h3>
+    <br>
+    <input placeholder="Username..." id="change_email" />
+    <input placeholder="New Password..." id="change_password" />
+    <input type="password" placeholder="Confrim Password..." id="confirm_password" />
+    <button id="pass" onclick="changepass()">Change Password</button><br>
+    <button id="back" class="back" onclick="cancel()">Cancel</button>
+  </div>  
 
 
 <div id="user_div" class="loggedin-div">
@@ -11343,6 +11354,7 @@ input[type=text] {
         document.getElementsByName("date")[0].setAttribute('max', nextWeekDate)
         document.getElementsByName("dates")[0].setAttribute('max', nextWeekDate)
       
+       
         
         function search() {
         var query_value = $('input#search').val();
@@ -14065,7 +14077,10 @@ input[type=text] {
               document.getElementById("fName").value = "";
               document.getElementById("OwnerName").disabled = true;
             }
-
+ document.getElementById("pass_div").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        document.getElementById("user_div").style.display = "none";
+        document.getElementById("login_div").style.display = "block";
 
       };
     </script>
