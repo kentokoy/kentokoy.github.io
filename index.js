@@ -28,52 +28,132 @@ var lotnummod = document.getElementById("lotnumMod");
 var lotlevelmod = document.getElementById("lotlevelMod");
 var modal = document.getElementById('myModal');
 var level = document.getElementById('Level');
-
-
+var username = document.getElementById('email_field');
+var pass = document.getElementById('password_field');
+var confirm = document.getElementById('confirm_password');
+var changeUser = document.getElementById('change_email');
+var changePassword = document.getElementById('change_password');
 var submitBtn = document.getElementById("submitBtn");
 
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
+//firebase.auth().onAuthStateChanged(function(user) {
+ //if (user) {
     // User is signed in.
-	document.getElementById("header").style.display = "block";
-    document.getElementById("user_div").style.display = "block";
-    document.getElementById("login_div").style.display = "none";
-    //window.open('file:///C:/xampp/htdocs/thesis/map.html','_self');
+//document.getElementById("header").style.display = "block";
+//   document.getElementById("user_div").style.display = "block";
+//   document.getElementById("login_div").style.display = "none";
 
-    var user = firebase.auth().currentUser;
+ // window.open('file:///C:/xampp/htdocs/thesis/map.html','_self');
 
-  } else {
+//   var user = firebase.auth().currentUser;
+
+// } else {
     // No user is signed in.
-    document.getElementById("header").style.display = "none";
-    document.getElementById("user_div").style.display = "none";
-    document.getElementById("login_div").style.display = "block";
+//   document.getElementById("header").style.display = "none";
+//   document.getElementById("user_div").style.display = "none";
+//   document.getElementById("login_div").style.display = "block";
+//   document.getElementById("pass_div").style.display = "none";
+
+// }
+// });
 
 
-  }
-  });
 
 function login(){
 
-  var userEmail = document.getElementById("email_field").value;
-  var userPass = document.getElementById("password_field").value;
+//  var userEmail = document.getElementById("email_field").value;
+//  var userPass = document.getElementById("password_field").value;
 
-  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+ // firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
     // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-
-    window.alert("Error : " + errorMessage);
+ //   var errorCode = error.code;
+ //   var errorMessage = error.message;
+//
+  //  window.alert("Error : " + errorMessage);
 
     // ...
-  });
+  //});
+  var username1 = username.value;
+  var password = pass.value;
+  var loginref = firebase.database().ref("Login");
+   loginref.on('value', function(datasnapshot){
+		var cuser = datasnapshot.child("user").val()	 
+		var cpass = datasnapshot.child("password").val()	
+		if(username1 == cuser && password == cuser){
+			//window.alert("login");
+			  document.getElementById("header").style.display = "block";
+		 	  document.getElementById("user_div").style.display = "block";
+		 	  document.getElementById("login_div").style.display = "none";
+			
+		}else if(username1 == "" && password == ""){
+			window.alert("Please fill any form");
+		}else{
+			window.alert("Username or Password is incorrect");
+		}         	
+	 		
+	});
+  //
+  //login.child("user").set(username1);
+ // login.child("password").set(password);
+  //console.log(username1 + password);
+
 
 }
 
 function logout(){
-  firebase.auth().signOut();
+  //firebase.auth().signOut();
+   document.getElementById("header").style.display = "none";
+   document.getElementById("user_div").style.display = "none";
+   document.getElementById("login_div").style.display = "block";
+   username.value = "";
+   pass.value = "";
 }
 
+function password(){
+
+  document.getElementById("header").style.display = "none";
+   document.getElementById("user_div").style.display = "none";
+   document.getElementById("login_div").style.display = "none";
+   document.getElementById("pass_div").style.display = "block";
+   username.value = "";
+   pass.value = "";
+  }  
+
+function changepass(){
+  var username1 = changeUser.value;
+  var password = changePassword.value;
+  var conpass = confirm.value;
+  var loginref = firebase.database().ref("Login");
+  
+  		loginref.on('value', function(datasnapshot){
+  			var cuser = datasnapshot.child("user").val()
+  			var cpass = datasnapshot.child("password").val()
+		if(username1 == cuser && password == conpass){
+			
+			loginref.child("password").set(conpass);
+	 		document.getElementById("header").style.display = "none";
+   			document.getElementById("user_div").style.display = "none";
+   			document.getElementById("login_div").style.display = "block";
+   			document.getElementById("pass_div").style.display = "none";
+		
+		  }else if(username1 !== cuser || password !== conpass){
+		  	window.alert("Incorrect Information");
+		  	username.value = "";
+		   pass.value = "";
+		  }else if(username1 == "" || password == "" || conpass == ""){
+		  	window.alert("Please complete any form");
+		  	username.value = "";
+		   pass.value = "";
+		  }
+   });
+   
+}
+
+function cancel(){
+	document.getElementById("header").style.display = "block";
+   document.getElementById("user_div").style.display = "block";
+   document.getElementById("login_div").style.display = "none";
+   document.getElementById("pass_div").style.display = "none";
+}
 
 function submitClick() {
 
