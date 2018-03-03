@@ -946,7 +946,7 @@ function submitClick() {
 
 		
 
-	window.alert("Done")
+	
 
 }
 
