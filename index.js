@@ -84,6 +84,8 @@ function login(){
 		 	  document.getElementById("user_div").style.display = "block";
 		 	  document.getElementById("login_div").style.display = "none";
 			
+			loginref.child("Status").set("Login");
+
 		}else if(username1 == "" && password == ""){
 			window.alert("Please fill any form");
 		}else{
@@ -101,9 +103,17 @@ function login(){
 
 function logout(){
   //firebase.auth().signOut();
-   document.getElementById("header").style.display = "none";
-   document.getElementById("user_div").style.display = "none";
-   document.getElementById("login_div").style.display = "block";
+   //document.getElementById("header").style.display = "none";
+   //document.getElementById("user_div").style.display = "none";
+   //document.getElementById("login_div").style.display = "block";
+
+   var loginref = firebase.database().ref("Login");
+   loginref.on('value', function(datasnapshot){			
+			
+			loginref.child("Status").set("Logout");
+
+	});
+
    username.value = "";
    pass.value = "";
 }
