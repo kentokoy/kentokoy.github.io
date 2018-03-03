@@ -111,6 +111,17 @@ function logout(){
    var loginref = firebase.database().ref("Login");
    loginref.child("Status").set("Logout");
    
+   var loginref = firebase.database().ref("Login").child("Status");
+            loginref.on('value', function(snapshot){
+                if(snapshot.val() == "Logut"){
+                   // alert("logout");
+                     document.getElementById("header").style.display = "none";
+                     document.getElementById("user_div").style.display = "none";
+                     document.getElementById("login_div").style.display = "block";
+
+                }           
+                
+        });
 
    username.value = "";
    pass.value = "";
