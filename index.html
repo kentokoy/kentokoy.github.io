@@ -26,7 +26,7 @@
 input[type=text] {
     display: inline-block;
     width: 350px;
-    margin-left: 50px;
+    margin-left: 785px;
     margin-top: 2px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -50,16 +50,18 @@ input[type=text] {
     <header id="header">        
 
                 <div class="innertube">  
-                <img border="0" src="icon.png " alt="name" width="30" height="50" position="absolute" /> 
+                <img border="0" src="icon.png " alt="name" width="120" height="50" position="absolute"/>
                 <input class="searchlastname" id="search" type="text" name="search" autocomplete="off" placeholder="Search for deceased person ">
-                <h4 id="results-text">Showing results for: <b id="search-string">Array</b></h4>
-                <ul id="results"></ul>    
-                   
-                        <button id="logout" onclick="logout()">Logout</button>
+                 <button id="logout" onclick="logout()">Logout</button>
                         <button id="changepass" onclick="password()">Change Password</button>
+                        </div>
+                <h4 id="results-text">Showing results for: <b id="search-string">Array</b></h4>
+                <ul  id="results"></ul>    
+                   
+                       
                           
                 
-                </div>
+                
             </header>
         
 <div id="login_div" class="main-div">
@@ -286,17 +288,28 @@ input[type=text] {
      
           
          </div>
-         
-    		<button id="submitBtn" class="submitBtn" onClick="submitClick()"><a>Submit</a></button>
-
+            
+    		
+            
+            <h2 align="left">ADD IMAGE:</h2>
             <form ng-submit="uploadFile()">
-            <input type="file" name="file" class="inputimg" id="nameImg" accept="image/*">
+        <input type="file" name="file" class="inputimg" id="nameImg" accept="image/*">
+        <br />
+        <span class="input-group-btn">
+                <button  type="submit" class="btn btn-block">Upload Image 
+                  <i class="material-icons">send</i>
+                </button>
+          </span>
+      </form>
+            <button id="submitBtn" class="submitBtn" onClick="submitClick()"><a>Submit</a></button>
+            <!--<form ng-submit="uploadFile()">
+            
             
             <span class="input-group-btn">
-                    <button  type="submit" class="btn-block">Upload Image</button>
+                    <button onClick="uploadImage()"  class="btn-block">Upload Image</button>
               </span>
           </form>
-    	    
+    	    -->
         </div>
 
 
@@ -11425,30 +11438,30 @@ input[type=text] {
                  }
             }
 
-            function errData(err){
-                console.log('Error');
-                console.log(err);
+                    function errData(err){
+                        console.log('Error');
+                        console.log(err);
+                    }
+                        }return false;    
             }
-                }return false;    
-    }
 
-    $("input#search").on("keyup", function(e) {
-        // Set Timeout
-        clearTimeout($.data(this, 'timer'));
+            $("input#search").on("keyup", function(e) {
+                // Set Timeout
+                clearTimeout($.data(this, 'timer'));
 
-        // Set Search String
-        var search_string = $(this).val();
+                // Set Search String
+                var search_string = $(this).val();
 
-        // Do Search
-        if (search_string == '') {
-            $("ul#results").fadeOut();
-            $('h4#results-text').fadeOut();
-        }else{
-            $("ul#results").fadeIn();
-            $('h4#results-text').fadeIn();
-            $(this).data('timer', setTimeout(search, 100));
-        };
-    });
+                // Do Search
+                if (search_string == '') {
+                    $("ul#results").fadeOut();
+                    $('h4#results-text').fadeOut();
+                }else{
+                    $("ul#results").fadeIn();
+                    $('h4#results-text').fadeIn();
+                    $(this).data('timer', setTimeout(search, 100));
+                };
+            });
 
 
     //$('ul#results').click(function(e) { 
@@ -14094,10 +14107,13 @@ input[type=text] {
               document.getElementById("fName").value = "";
               document.getElementById("OwnerName").disabled = true;
             }
- document.getElementById("pass_div").style.display = "none";
+
+        document.getElementById("pass_div").style.display = "none";
         document.getElementById("header").style.display = "none";
         document.getElementById("user_div").style.display = "none";
         document.getElementById("login_div").style.display = "block";
+
+   
 
       };
     </script>

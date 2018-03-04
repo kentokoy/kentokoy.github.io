@@ -60,18 +60,18 @@ var submitBtn = document.getElementById("submitBtn");
 
 function login(){
 
-//  var userEmail = document.getElementById("email_field").value;
-//  var userPass = document.getElementById("password_field").value;
+	//  var userEmail = document.getElementById("email_field").value;
+	//  var userPass = document.getElementById("password_field").value;
 
- // firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-    // Handle Errors here.
- //   var errorCode = error.code;
- //   var errorMessage = error.message;
-//
-  //  window.alert("Error : " + errorMessage);
+	 // firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+	    // Handle Errors here.
+	 //   var errorCode = error.code;
+	 //   var errorMessage = error.message;
+	//
+	  //  window.alert("Error : " + errorMessage);
 
-    // ...
-  //});
+	    // ...
+	  //});
   var username1 = username.value;
   var password = pass.value;
   var loginref = firebase.database().ref("Login");
@@ -98,8 +98,6 @@ function login(){
   //login.child("user").set(username1);
  // login.child("password").set(password);
   //console.log(username1 + password);
-
-
 }
 
 function logout(){
@@ -137,6 +135,7 @@ function password(){
    pass.value = "";
   }  
 
+
 function changepass(){
   var username1 = changeUser.value;
   var password = changePassword.value;
@@ -164,7 +163,6 @@ function changepass(){
 		   pass.value = "";
 		  }
    });
-   
 }
 
 function cancel(){
@@ -923,8 +921,29 @@ function submitClick() {
 					frLotLevel.child("Status").set("Reserved");
 					//all.set(null);	
 					
+
+
+
+
+
 					
-					
+		
+
+		
+
+			
+			var file = $('#nameImg').get(0).files[0];
+			var name = file.name;
+
+			var storageRef = firebase.storage().ref('id' + name);
+			//var stref = storageRef.child(file.name);
+			console.log(name);
+			//storageRef.put(file);
+
+		
+
+
+
 	////////////////////////////////////////////////////
 			
 
@@ -943,13 +962,7 @@ function submitClick() {
 						
 						
 		}
-
-		
-
-	
-
 }
-
 
 function edit(){
 
@@ -980,7 +993,9 @@ function edit(){
 		}
 		check();
 		modal.style.display = "none";
-
 }
+
+
+
 
 
