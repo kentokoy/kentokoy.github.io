@@ -55,6 +55,30 @@ var submitBtn = document.getElementById("submitBtn");
 
 // }
 // });
+var id = "";
+  	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  	for (var i = 0; i < 5; i++)
+   	id += possible.charAt(Math.floor(Math.random() * possible.length));
+
+
+
+  document.getElementById("imgbtn").style.display = "none";
+
+  var selectedfile = "";
+  
+  var browse = document.getElementById('imageupload');
+
+function browseClick(event){
+  document.getElementById("imgbtn").style.display = "block";
+  document.getElementById("imageupload").style.display = "none";
+
+  selectedfile = event.target.files[0];
+
+  }
+
+document.getElementById('imageupload').addEventListener("change", browseClick);
+
 
 
 
@@ -182,11 +206,7 @@ function submitClick() {
 
 	//////////////////////////////////////////////////////////////////////////////////
 
-	var id = "";
-  	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  	for (var i = 0; i < 5; i++)
-   	id += possible.charAt(Math.floor(Math.random() * possible.length));
+	
 	
    	//////////////////////////////////////////////////////////////////////////////////
 
@@ -839,6 +859,7 @@ function submitClick() {
 	var nID = lID + numID;
 	var mID = lID + numID + lvlID;
 	
+	
 
 	//firebaseRef.push().set(messageText);      unique value
 	//firebaseRef.child("Text").set(messageText);
@@ -920,30 +941,6 @@ function submitClick() {
 				}else if(document.getElementById('reserved').checked)
 					frLotLevel.child("Status").set("Reserved");
 					//all.set(null);	
-					
-
-
-
-
-
-					
-		
-
-		
-
-			
-			var file = $('#nameImg').get(0).files[0];
-			var name = file.name;
-
-			var storageRef = firebase.storage().ref('id' + name);
-			//var stref = storageRef.child(file.name);
-			console.log(name);
-			//storageRef.put(file);
-
-		
-
-
-
 	////////////////////////////////////////////////////
 			
 
@@ -962,6 +959,42 @@ function submitClick() {
 						
 						
 		}
+
+var filename = selectedfile.name;
+
+  var bases = firebase.storage().ref("/image/" + filename);
+  var uploadTask = bases.put(selectedfile);
+
+      // Register three observers:
+    // 1. 'state_changed' observer, called any time the state changes
+    // 2. Error observer, called on failure
+    // 3. Completion observer, called on successful completion
+    uploadTask.on('state_changed', function(snapshot){
+      // Observe state change events such as progress, pause, and resume
+      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log('Upload is ' + progress + '% done');
+      switch (snapshot.state) {
+        case firebase.storage.TaskState.PAUSED: // or 'paused'
+          console.log('Upload is paused');
+          break;
+        case firebase.storage.TaskState.RUNNING: // or 'running'
+          console.log('Upload is running');
+          break;
+      }
+    }, function(error) {
+      // Handle unsuccessful uploads
+    }, function() {
+      // Handle successful uploads on complete
+      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+      var downloadURL = uploadTask.snapshot.downloadURL;
+      var bases = firebase.database().ref();
+      var newbase = bases.child("Deceased");
+      var imgRef = newbase.child(nID);
+        imgRef.child("imageUrl").set(downloadURL);
+        imgRef.child("imagename").set(filename);
+    });
+
 }
 
 function edit(){

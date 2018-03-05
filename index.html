@@ -292,15 +292,11 @@ input[type=text] {
     		
             
             <h2 align="left">ADD IMAGE:</h2>
-            <form ng-submit="uploadFile()">
-        <input type="file" name="file" class="inputimg" id="nameImg" accept="image/*">
-        <br />
-        <span class="input-group-btn">
-                <button  type="submit" class="btn btn-block">Upload Image 
-                  <i class="material-icons">send</i>
-                </button>
-          </span>
-      </form>
+            <label id="imageupload" class="mdl-button mdl-js-button mdl-js-ripple-effect" onChange="browseClick()">
+                Browse File
+                <input type="file" id="chosenfile" class="chosenfile">
+            </label>
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="imgbtn" onClick="uploadfile()">Upload File</button>
             <button id="submitBtn" class="submitBtn" onClick="submitClick()"><a>Submit</a></button>
             <!--<form ng-submit="uploadFile()">
             
