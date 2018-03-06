@@ -67,13 +67,12 @@ var id = "";
 
   var selectedfile = "";
   
-  var browse = document.getElementById('imageupload');
+  
 
-function browseClick(event){
-  document.getElementById("imgbtn").style.display = "block";
-  document.getElementById("imageupload").style.display = "none";
+function browseClick(events){
 
-  selectedfile = event.target.files[0];
+
+  selectedfile = document.getElementById('chosenfile').files[0];
 
   }
 
@@ -905,6 +904,41 @@ function submitClick() {
 	//all.child("Birth").set(bDayVar);
 	//all.child("Death").set(dDayVar);
 
+				var filename = selectedfile.name;
+
+			  var bases = firebase.storage().ref("/image/" + filename);
+			  var uploadTask = bases.put(selectedfile);
+
+			      // Register three observers:
+			    // 1. 'state_changed' observer, called any time the state changes
+			    // 2. Error observer, called on failure
+			    // 3. Completion observer, called on successful completion
+			    uploadTask.on('state_changed', function(snapshot){
+			      // Observe state change events such as progress, pause, and resume
+			      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+			      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+			      console.log('Upload is ' + progress + '% done');
+			      switch (snapshot.state) {
+			        case firebase.storage.TaskState.PAUSED: // or 'paused'
+			          console.log('Upload is paused');
+			          break;
+			        case firebase.storage.TaskState.RUNNING: // or 'running'
+			          console.log('Upload is running');
+			          break;
+			      }
+			    }, function(error) {
+			      // Handle unsuccessful uploads
+			    }, function() {
+			      // Handle successful uploads on complete
+			      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+			      var downloadURL = uploadTask.snapshot.downloadURL;
+			      var bases = firebase.database().ref();
+			      var newbase = bases.child("Deceased");
+			      var imgRef = newbase.child(nID);
+			        imgRef.child("imageUrl").set(downloadURL);
+			        imgRef.child("imagename").set(filename);
+			    });
+
 			
 
 
@@ -943,6 +977,40 @@ function submitClick() {
 					//all.set(null);	
 	////////////////////////////////////////////////////
 			
+			var filename = selectedfile.name;
+
+			  var bases = firebase.storage().ref("/image/" + filename);
+			  var uploadTask = bases.put(selectedfile);
+
+			      // Register three observers:
+			    // 1. 'state_changed' observer, called any time the state changes
+			    // 2. Error observer, called on failure
+			    // 3. Completion observer, called on successful completion
+			    uploadTask.on('state_changed', function(snapshot){
+			      // Observe state change events such as progress, pause, and resume
+			      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+			      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+			      console.log('Upload is ' + progress + '% done');
+			      switch (snapshot.state) {
+			        case firebase.storage.TaskState.PAUSED: // or 'paused'
+			          console.log('Upload is paused');
+			          break;
+			        case firebase.storage.TaskState.RUNNING: // or 'running'
+			          console.log('Upload is running');
+			          break;
+			      }
+			    }, function(error) {
+			      // Handle unsuccessful uploads
+			    }, function() {
+			      // Handle successful uploads on complete
+			      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+			      var downloadURL = uploadTask.snapshot.downloadURL;
+			      var bases = firebase.database().ref();
+			      var newbase = bases.child("Deceased");
+			      var imgRef = newbase.child(mID);
+			        imgRef.child("imageUrl").set(downloadURL);
+			        imgRef.child("imagename").set(filename);
+			    });
 
 			//all.child("FirstName").set(fNameVar);
 			//all.child("LastName").set(lNameVar);
@@ -960,40 +1028,7 @@ function submitClick() {
 						
 		}
 
-var filename = selectedfile.name;
 
-  var bases = firebase.storage().ref("/image/" + filename);
-  var uploadTask = bases.put(selectedfile);
-
-      // Register three observers:
-    // 1. 'state_changed' observer, called any time the state changes
-    // 2. Error observer, called on failure
-    // 3. Completion observer, called on successful completion
-    uploadTask.on('state_changed', function(snapshot){
-      // Observe state change events such as progress, pause, and resume
-      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');
-      switch (snapshot.state) {
-        case firebase.storage.TaskState.PAUSED: // or 'paused'
-          console.log('Upload is paused');
-          break;
-        case firebase.storage.TaskState.RUNNING: // or 'running'
-          console.log('Upload is running');
-          break;
-      }
-    }, function(error) {
-      // Handle unsuccessful uploads
-    }, function() {
-      // Handle successful uploads on complete
-      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-      var downloadURL = uploadTask.snapshot.downloadURL;
-      var bases = firebase.database().ref();
-      var newbase = bases.child("Deceased");
-      var imgRef = newbase.child(nID);
-        imgRef.child("imageUrl").set(downloadURL);
-        imgRef.child("imagename").set(filename);
-    });
 
 }
 

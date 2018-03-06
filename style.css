@@ -58,6 +58,11 @@ img {
     position: absolute;
 }
 
+#myimg {
+    margin-left: -200px;
+    margin-top: 25px;
+}
+
 textarea {
     border: 0px;
     margin-bottom: -20px;

@@ -9,6 +9,7 @@ var lottypemod = document.getElementById("lottypeMod");
 var lotnummod = document.getElementById("lotnumMod");
 var lotlevelmod = document.getElementById("lotlevelMod");
 var owner = document.getElementById("owner");
+var chosenfile = document.getElementById("chosenfile");
 
 
 
@@ -37,6 +38,8 @@ var owner = document.getElementById("owner");
 			        modal.style.display = "none";
 			    }
 			
+
+			
 			 
 
 			var ref = firebase.database().ref("Deceased").child("L11A");
@@ -57,7 +60,16 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+
+				          	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
 			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
+							  
 							
 			                		
 			             });
@@ -102,7 +114,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                     		
+			                     	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -145,7 +164,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                  	
+			                  	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -188,7 +214,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                    		
+			                    var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;		
 			             });
 
 			}
@@ -231,7 +264,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                   		
+			                   		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -274,7 +314,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -318,7 +365,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -361,7 +415,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                
+			                var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -404,7 +465,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                
+			                var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -447,7 +515,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -489,7 +564,15 @@ var owner = document.getElementById("owner");
 			          		var statref = firebase.database().ref("AssumptionGardens").child("Lawn1").child("2").child("e");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
-				          		});  		
+				          		});  
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;		
 			             });
 
 			}
@@ -532,7 +615,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                  		
+			                  		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -575,7 +665,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               	
+			               	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -618,7 +715,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                
+			                var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -661,7 +765,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                	
+			                	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -704,7 +815,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -747,7 +865,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               	
+			               	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -790,7 +915,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                  		
+			                  	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -833,7 +965,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                  		
+			                  		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -876,7 +1015,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               		
+			               		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -919,7 +1065,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              		
+			              		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -962,7 +1115,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                	
+			                	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1008,7 +1168,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               		
+			               		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1052,7 +1219,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                 		
+			                 	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -1096,7 +1270,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                  		
+			                  	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -1140,7 +1321,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                    		
+			                    var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;		
 			             });
 
 			}
@@ -1184,7 +1372,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              		
+			              		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1228,7 +1423,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			            		
+			            		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1272,7 +1474,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+			          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
 			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1316,7 +1525,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1362,7 +1578,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			          			
+			          			var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1407,7 +1630,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              	
+			              	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1451,7 +1681,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              		
+			              		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1495,7 +1732,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                 		
+			                 		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1538,7 +1782,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               		
+			               		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1582,7 +1833,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			             	
+			             	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1625,7 +1883,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               
+			               var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1668,7 +1933,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               	
+			               	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1711,7 +1983,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              	
+			              	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1755,7 +2034,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               
+			               var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1799,7 +2085,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              
+			              var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1842,7 +2135,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               
+			               var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1886,7 +2186,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              	
+			              	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1930,7 +2237,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			             	
+			             	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -1976,7 +2290,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			          	
+			          	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2019,7 +2340,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			             	
+			             	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2062,7 +2390,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              
+			              var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2105,7 +2440,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -2148,7 +2490,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              
+			              var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2191,7 +2540,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			            
+			            var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2234,7 +2590,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -2277,7 +2640,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			             		
+			             		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2321,7 +2691,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              
+			              var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2364,7 +2741,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              	
+			              	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2407,7 +2791,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              		
+			              		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2450,7 +2841,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                     		
+			                     	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -2494,7 +2892,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                  		
+			                  	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -2537,7 +2942,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			            	
+			            	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2582,7 +2994,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               		
+			               		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2626,7 +3045,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               		
+			               		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2669,7 +3095,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              		
+			              		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2713,7 +3146,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -2756,7 +3196,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                    		
+			                    var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;		
 			             });
 
 			}
@@ -2799,7 +3246,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                    		
+			                    var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;		
 			             });
 
 			}
@@ -2842,7 +3296,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			              	
+			              	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2886,7 +3347,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			               	
+			               	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -2929,7 +3397,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
-			                		
+			                	var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -2972,6 +3447,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3014,6 +3497,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3056,6 +3547,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});	
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3099,6 +3598,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3142,6 +3649,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3185,6 +3700,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3227,6 +3750,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3271,6 +3802,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3313,7 +3852,15 @@ var owner = document.getElementById("owner");
 			          		var statref = firebase.database().ref("AssumptionGardens").child("GardenLot8").child("1").child("b");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
-				          		});		
+				          		});	
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -3356,6 +3903,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3399,7 +3954,15 @@ var owner = document.getElementById("owner");
 			          		var statref = firebase.database().ref("AssumptionGardens").child("GardenLot8").child("1").child("d");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
-				          		});		
+				          		});	
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;	
 			             });
 
 			}
@@ -3443,6 +4006,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3485,6 +4056,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3528,6 +4107,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3571,6 +4158,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3615,6 +4210,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -3658,6 +4261,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3700,6 +4311,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          			
 			             });
 
@@ -3743,6 +4362,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -3792,6 +4419,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -3840,6 +4475,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -3888,6 +4531,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          	
 			             });
 
@@ -3937,6 +4588,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			                     		
 			             });
 
@@ -3985,6 +4644,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4032,6 +4699,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4080,6 +4755,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -4128,6 +4811,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4175,6 +4866,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -4223,6 +4922,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4270,6 +4977,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -4318,6 +5033,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4365,6 +5088,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -4413,6 +5144,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4460,6 +5199,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4507,6 +5254,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4554,6 +5309,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4601,6 +5364,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4648,6 +5419,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4695,6 +5474,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4742,6 +5529,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4789,6 +5584,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4836,6 +5639,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4883,6 +5694,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4930,6 +5749,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -4977,6 +5804,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5024,6 +5859,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5068,6 +5911,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5110,6 +5961,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5152,6 +6011,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5194,6 +6061,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5236,6 +6111,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5279,6 +6162,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -5322,6 +6213,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5364,6 +6263,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5406,6 +6313,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5448,6 +6363,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5491,6 +6414,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5533,6 +6464,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5575,6 +6514,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5617,6 +6564,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5659,7 +6614,17 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+
+							var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
+
 
 			}
 				}					
@@ -5702,6 +6667,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5744,6 +6717,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5786,6 +6767,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5828,6 +6817,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5870,6 +6867,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5913,6 +6918,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5955,6 +6968,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -5997,6 +7018,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			             });
 
 			}
@@ -6039,6 +7068,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
@@ -6082,6 +7119,14 @@ var owner = document.getElementById("owner");
 				          		statref.on('value', function(snapshot){
 									statMod.value = snapshot.child("Status").val();
 				          		});
+				          		var image = datasnapshot.child("imagename").val();	
+				          	var imgurl = datasnapshot.child("imageUrl").val();
+			          		
+							
+
+							  // Or inserted into an <img> element:
+							  var img = document.getElementById('myimg');
+							  img.src = imgurl;
 			          		
 			             });
 
