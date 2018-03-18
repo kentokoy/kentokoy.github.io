@@ -112,8 +112,14 @@ function login(){
 
 		}else if(username1 == "" && password == ""){
 			window.alert("Please fill any form");
+			document.getElementById("header").style.display = "none";
+		 	  document.getElementById("user_div").style.display = "none";
+		 	  document.getElementById("login_div").style.display = "block";
 		}else{
 			window.alert("Username or Password is incorrect");
+			document.getElementById("header").style.display = "none";
+		 	  document.getElementById("user_div").style.display = "none";
+		 	  document.getElementById("login_div").style.display = "block";
 		}         	
 	 		
 	});
